@@ -1,19 +1,23 @@
-# Integración de Github Actions y SonarQube
+# Github Actions and SonarQube integration
 
-Este repositorio contiene un ejemplo de cómo integrar [Sonarqube](https://docs.sonarsource.com/sonarqube/10.3/) con [Github Actions](https://docs.github.com/es/actions) ejecutando Sonarqube en local y exponiéndolo al exterior con [ngrok](https://ngrok.com/)
+This repository contains an example of [SonarQube](https://docs.sonarsource.com/sonarqube/10.3/) integration with [Github Actions](https://docs.github.com/en/actions). Running SonarQube locally and publishing it to the world using [ngrok](https://ngrok.com/)
 
-## Contexto
-Este repositorio forma parte del contenido de mi curso de udemy:
-* [Domina Sonarqube](https://www.udemy.com/course/domina-sonarqube/?referralCode=EF59257E7D8DC3026D6D)
+## Other languages / Otros idiomas
+[![en](https://img.shields.io/badge/en-english-blue.svg)](https://github.com/brainsDevopsOrg/sq-github-actions/blob/main/readme.md)
+[![es](https://img.shields.io/badge/es-español-yellow.svg)](https://github.com/brainsDevopsOrg/sq-github-actions/blob/main/readme-es.md)
 
-Si te interesa aprender más sobre Sonarqube o Github Actions, Puedes ver si hay promociones vigentes para los cursos en la sección de cursos de [devopsbrains.com](https://devopsbrains.com/cursos/)
+## Context
+This repository is part of my Udemy course:
+* [SonarQube Mastery](https://www.udemy.com/course/sonarqube-mastery/?referralCode=EF59257E7D8DC3026D6D)
 
-# Uso del ejemplo
-* Crea un fork de este repositorio en tu cuenta de Github
-* Puedes lanzar SonarQube y ngrok en local siguiendo las instrucciones de este otro [repositorio](https://github.com/BrainsDevOps/sonarqube-udemy-docker-compose)
-* Crea un token para el análisis de proyectos en tu instancia local de [SonarQube](http://localhost:9000/account/security)
-* Crea secretos para tu url y token de sonar para tu repositorio de Github
-    * SONAR_TOKEN - El token que acabas de generar en el apartado de seguridad de SonarQube
-    * SONAR_HOST_URL - Tu dominio de ngrok, donde estás exponiendo Sonarqube en Internet
-* Lanza la acción en el apartado "Actions" de tu repositorio en Github. Con un push a la rama main o manualmente
-* Si todo sale bien, deberías de poder consultar el resultado en tu instancia de [SonarQube](http://localhost:9000/dashboard?id=github-actions)
+If you're interested in learning more about SonarQube or Github Actions, you can check for discount coupons in the course section of [devopsbrains.com](https://devopsbrains.com/cursos/)
+
+# Usage
+* Fork this repository on your Github account
+* You can run SonarQube and ngrok locally following the instructions in this  [repository](https://github.com/BrainsDevOps/sonarqube-udemy-docker-compose)
+* Create a token for the projects analysis in your [SonarQube](http://localhost:9000/account/security) local server
+* Create secrets for your sonar server url and token in your Github repository
+    * SONAR_TOKEN - The token you've generated in your SonarQube server
+    * SONAR_HOST_URL - Your Ngrok domain, where you're exposing SonarQube to the Internet
+* Run the action in the "Actions" tab of your Github repository. Manually or with a push to the main branch
+* If everything goes well, you should see the result of your analysis in your [SonarQube server](http://localhost:9000/dashboard?id=github-actions)
